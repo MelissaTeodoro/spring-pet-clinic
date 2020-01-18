@@ -1,2 +1,2 @@
 # spring-pet-clinic
-CRUD clínica veterinária com Spring Framework 5
+Pet Clinic CRUD with Spring Framework 5 and Spring Boot 2
