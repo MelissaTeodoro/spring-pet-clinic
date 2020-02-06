@@ -4,11 +4,11 @@ import com.springframework.springclinic.model.Vet;
 
 import java.util.Set;
 
-public interface VetService {
+public interface VetService extends CrudService<Vet, Long> {
 
     Vet findById(Long id);
 
-    Vet saveVet(Vet vet);
+    Vet save(Vet vet);
 
     Set<Vet> findAll();
 }
