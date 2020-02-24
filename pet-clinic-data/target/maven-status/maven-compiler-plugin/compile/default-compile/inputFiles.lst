@@ -1,5 +1,14 @@
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/map/AbstractMapService.java
 /Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/model/Person.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/VetService.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/model/BaseEntity.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/PetService.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/map/VetServiceMap.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/map/OwnerServiceMap.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/map/PetServiceMap.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/CrudService.java
 /Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/model/PetType.java
 /Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/model/Vet.java
 /Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/model/Pet.java
+/Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/services/OwnerService.java
 /Users/memiranda/estudos/spring-framework5/spring-pet-clinic/spring-pet-clinic/pet-clinic-data/src/main/java/com/springframework/springclinic/model/Owner.java

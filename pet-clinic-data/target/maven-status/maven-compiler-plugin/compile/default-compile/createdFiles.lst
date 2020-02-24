@@ -1,5 +1,5 @@
+com/springframework/springclinic/model/Pet.class
 com/springframework/springclinic/model/PetType.class
 com/springframework/springclinic/model/Owner.class
-com/springframework/springclinic/model/Person.class
 com/springframework/springclinic/model/Vet.class
-com/springframework/springclinic/model/Pet.class
+com/springframework/springclinic/model/Person.class
