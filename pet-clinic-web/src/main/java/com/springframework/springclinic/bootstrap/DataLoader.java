@@ -1,8 +1,10 @@
 package com.springframework.springclinic.bootstrap;
 
 import com.springframework.springclinic.model.Owner;
+import com.springframework.springclinic.model.PetType;
 import com.springframework.springclinic.model.Vet;
 import com.springframework.springclinic.services.OwnerService;
+import com.springframework.springclinic.services.PetTypeService;
 import com.springframework.springclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,14 +14,26 @@ public class DataLoader implements CommandLineRunner {
 
     private final VetService vetService;
     private final OwnerService ownerService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(VetService vetService, OwnerService ownerService) {
+    public DataLoader(VetService vetService, OwnerService ownerService, PetTypeService petTypeService) {
         this.vetService = vetService;
         this.ownerService = ownerService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("dog");
+        PetType savedDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("cat");
+        PetType savedCatType = petTypeService.save(cat);
+
+        System.out.println("Load Pets.......");
 
         Owner owner1 = new Owner();
         owner1.setFirstName("John");
