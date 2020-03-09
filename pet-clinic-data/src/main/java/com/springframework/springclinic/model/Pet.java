@@ -1,20 +1,35 @@
 package com.springframework.springclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity {
 
-    private String nome;
-    private PetType petType;
-    private Owner owner;
-    private LocalDate birthDay;
+    @Column(name = "name")
+    private String name;
 
-    public String getNome() {
-        return nome;
+    @ManyToOne
+    @Column(name = "type_id")
+    private PetType petType;
+
+    @ManyToOne
+    @Column(name = "owner_id")
+    private Owner owner;
+
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
+
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public PetType getPetType() {
@@ -33,11 +48,11 @@ public class Pet extends BaseEntity {
         this.owner = owner;
     }
 
-    public LocalDate getBirthDay() {
-        return birthDay;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthDay(LocalDate birthDay) {
-        this.birthDay = birthDay;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 }

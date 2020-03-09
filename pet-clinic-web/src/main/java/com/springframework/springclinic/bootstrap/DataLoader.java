@@ -26,11 +26,11 @@ public class DataLoader implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         int count = petTypeService.findAll().size();
 
-        if(count == 0) {
+        if (count == 0) {
             loadData();
         }
     }
@@ -68,8 +68,8 @@ public class DataLoader implements CommandLineRunner {
         Pet mykesPet = new Pet();
         mykesPet.setPetType(savedDogType);
         mykesPet.setOwner(owner1);
-        mykesPet.setBirthDay(LocalDate.now());
-        mykesPet.setNome("Rosco");
+        mykesPet.setBirthDate(LocalDate.now());
+        mykesPet.setName("Rosco");
         owner1.getPets().add(mykesPet);
 
         ownerService.save(owner1);
@@ -84,8 +84,8 @@ public class DataLoader implements CommandLineRunner {
         Pet fionasCat = new Pet();
         fionasCat.setPetType(savedCatType);
         fionasCat.setOwner(owner2);
-        fionasCat.setBirthDay(LocalDate.now());
-        fionasCat.setNome("Just cat");
+        fionasCat.setBirthDate(LocalDate.now());
+        fionasCat.setName("Just cat");
         owner1.getPets().add(fionasCat);
 
         ownerService.save(owner2);
