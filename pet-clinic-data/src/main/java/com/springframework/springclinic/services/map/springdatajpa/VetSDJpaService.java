@@ -1,8 +1,6 @@
 package com.springframework.springclinic.services.map.springdatajpa;
 
 import com.springframework.springclinic.model.Vet;
-import com.springframework.springclinic.repositories.PetRepository;
-import com.springframework.springclinic.repositories.PetTypeRepository;
 import com.springframework.springclinic.repositories.VetRepository;
 import com.springframework.springclinic.services.VetService;
 import org.springframework.context.annotation.Profile;
@@ -16,14 +14,9 @@ import java.util.Set;
 public class VetSDJpaService implements VetService {
 
     private VetRepository vetRepository;
-    private PetRepository petRepository;
-    private PetTypeRepository petTypeRepository;
 
-    public VetSDJpaService(VetRepository vetRepository, PetRepository petRepository,
-                           PetTypeRepository petTypeRepository) {
+    public VetSDJpaService(VetRepository vetRepository) {
         this.vetRepository = vetRepository;
-        this.petRepository = petRepository;
-        this.petTypeRepository = petTypeRepository;
     }
 
     @Override
