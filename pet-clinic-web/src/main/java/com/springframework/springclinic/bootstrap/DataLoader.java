@@ -1,10 +1,7 @@
 package com.springframework.springclinic.bootstrap;
 
 import com.springframework.springclinic.model.*;
-import com.springframework.springclinic.services.OwnerService;
-import com.springframework.springclinic.services.PetTypeService;
-import com.springframework.springclinic.services.SpecialtyService;
-import com.springframework.springclinic.services.VetService;
+import com.springframework.springclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,14 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(VetService vetService, OwnerService ownerService, PetTypeService petTypeService, com.springframework.springclinic.services.SpecialtyService specialtyService) {
+    public DataLoader(VetService vetService, OwnerService ownerService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.vetService = vetService;
         this.ownerService = ownerService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -86,11 +85,18 @@ public class DataLoader implements CommandLineRunner {
         fionasCat.setOwner(owner2);
         fionasCat.setBirthDate(LocalDate.now());
         fionasCat.setName("Just cat");
-        owner1.getPets().add(fionasCat);
+        owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
 
-        System.out.println("Load Owners.......");
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setLocalDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit);
+
+        System.out.println("Loaded Owners.......");
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Mayhsa");
@@ -110,6 +116,6 @@ public class DataLoader implements CommandLineRunner {
         vet3.getSpecialities().add(dentistry);
         vetService.save(vet3);
 
-        System.out.println("Load Vets.......");
+        System.out.println("Loaded Vets.......");
     }
 }
